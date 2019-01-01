@@ -1,3 +1,6 @@
+# This README is a Work in Progress. Please don't use this README, except to read this line.
+# Refer to github.com/spegelius/Dollo if you're looking to build a printer 
+
 # Dollo3D
 A (almost) fully printed 3D printer, that scales.
 
@@ -19,7 +22,7 @@ A (almost) fully printed 3D printer, that scales.
 
 8) Hope people stop asking "what if you could 3D print a 3D printer" because of course you can and it's not that unique of an idea
 
-# Part count and list for smallest viable Dollo, with around 21x21x12cm print volume. Smaller frame can be built, but the z-axis parts aren't tested in any way with that kind of setup
+# Part count and list for smallest viable Dollo, with around 21x21x12cm print volume. Smaller frame can be built, but the z-axis parts aren't tested in any way with that kind of setup. All parts to assemble the printer (on Jan 1, 2019) were in NEW_long_ties
 
 * 25 -- extention.stl
 * 4 -- extention_90_bend.stl (or extention_90_bend_extra_stiff.stl)
@@ -113,30 +116,30 @@ A (almost) fully printed 3D printer, that scales.
 4. bed_carriage_rails, centers, z_screws: 3 perimeters, 25+% infill
 5. All _tie parts: print only after printing at least 1 extention. Print few of each _tie part and see how they fit. Most likely you'll need to use scaling in slicer sw to get them fit.
 
-# How to assemble (mostly old info, needs update)
-1) start with the basic frame, take a single corner and butt joint all 3 extension pieces to it with all 4 bow_tie slots. then on the end of each of those add corner pieces then extension pieces again until you have built out a full cube shape.
+# How to assemble (spegelius: "mostly old info, needs update")
+1) START WITH THE BASIC FRAME. take a single corner and butt joint all 3 extension pieces to it with all 4 bow_tie slots. then on the end of each of those add corner pieces then extension pieces again until you have built out a full cube shape.
 
-2) put on the racks. first you need to decide what side you want to be up, this really doesn't matter since it should be the same on all sides. Once you have figured that out, you can start putting your slots on the top of your printer with more bow ties add racks on parallel sides and to the top of your remaining extension piece. each should have 3 racks on it.
+2) MOUNT THE RACKS. first you need to decide what side you want to be up, this really doesn't matter since it should be the same on all sides. Once you have figured that out, you can start putting your slots on the top of your printer with more bow ties add racks on parallel sides and to the top of your remaining extension piece. each should have 3 racks on it.
 
-3) mounting your motors. first you will need to put a gear.scad on your motor shaft, then you can take a motor and put the motor_mount_small on it and screw in the single counter sunk screw on the bottom using a M3x10 and then put it on your printer rack and make sure the gear aligned with the rack teeth. once it does you can keep it on the rack and screw in your other motor_mount_small to the other side. (make sure to do this on the printer because if you don't it wont go on after) do this for all 3 racks and make sure the motor faces out.
+3) MOUNTING YOUR MOTORS. first you will need to put a gear.scad on your motor shaft, then you can take a motor and put the motor_mount_small on it and screw in the single counter sunk screw on the bottom using a M3x10 and then put it on your printer rack and make sure the gear aligned with the rack teeth. once it does you can keep it on the rack and screw in your other motor_mount_small to the other side. (make sure to do this on the printer because if you don't it wont go on after) do this for all 3 racks and make sure the motor faces out.
 
-4) mounting the x axis. grab your x_spacer and put them on the end of what you already have assembled on the left over extention piece and then slide that into the motor mount on each side of the printer.
+4) MOUNTING THE X-AXIS. grab your x_spacer and put them on the end of what you already have assembled on the left over extention piece and then slide that into the motor mount on each side of the printer.
 
-5) Get the frame ready for the bed. first you need to prep you printer by taking the crazy looking twist_corner pieces and bow tie them to the inside of the printers frame mirroring each other but keep the bottom one out on each side.
+5) PREPARE THE FRAME FOR THE BED. first you need to prep you printer by taking the crazy looking twist_corner pieces and bow tie them to the inside of the printers frame mirroring each other but keep the bottom one out on each side.
 
-6) now take a motor and mount put the gear_one on it and mount that to your bed, then take your middle_gear and put those next to the motor and then put your large_gear and large_twist together, and put those next in line. 
+6) PREPARE THE Z-AXIS. now take a motor and mount put the gear_one on it and mount that to your bed, then take your middle_gear and put those next to the motor and then put your large_gear and large_twist together, and put those next in line. 
 
-7) putting the bed in. This can be kind of tricky, but you have to twist your bed so it goes inside the frame sideways and the you should be-able to twist it to make it fit in the frame with the corners sticking out. and this is why we didn't put in the bottom corner_twists, because now your bed sits just under them and once you have the electronics set up it will be able to twist into those and once its in the teeth you will be able to add your last parts under it.
+7) INSERT THE BED. This can be kind of tricky, but you have to twist your bed so it goes inside the frame sideways, and then you should be able to rotate the bed to make it fit in the frame with the corners sticking out. This is why we didn't put in the bottom corner_twists: now your bed sits just under them. Once you have the electronics set up, the bed will be able to twist into those. When it is in the teeth, you will be able to add your last parts under it.
 
-8) Electricity is fun. take all of your motor and put them into the correct stepper controllers making sure that your Y motors are plugged in opposite of each other. Plug in your electronics and make sure to upload the correct Dollo version of marlin. Once you have done this you should be able to move your motors and this is where you move your z motor in the negative direction (negative because that make the hotend and the bed closer) and once it is up at the top, you can put your last twist_corners on your printer.
+8) PREPARE ELECTRICAL CONNECTIONS. Take all of your motors and plug them into the correct stepper controllers, making sure that your Y-motors are plugged in with opposite polarities. Plug in your electronics and make sure to upload the correct Dollo version of Marlin. Once you have done this, you should be able to move your motors. This is where you move your Z-motor in the negative direction (negative, because that makes the hotend and the bed closer). Once it is at the top, you can put your last twist_corners on your printer.
 
-9) hot ends and end stops. at the point of making this commit I do not yet have the end stops figured out. But the hotend should put in your hotend mount and should just slide and clip into your x motor mount. 
+9) HOTENDS AND ENDSTOPS. At the point of making this commit, I don't have the endstops figured out yet. But, you should put the hotend in your hotend mount, and it should just slide and clip into your X-motor mount. 
 
-10) setting up the extruder. Not sure what extruder we are going to use yet, but if you have done 3D printing before you should know how all of that works and be able to get it going.
+10) EXTRUDER SETUP. Not sure what extruder we are going to use yet, but if you have done 3D printing before, you should know how all of that works, and be able to get it going.
 
-Z options) I do have the z axis all modeled for being fully printed and able to scale
+Z OPTIONS. I do have the Z-axis completely modeled for printing, with the ability to scale (kilometersperhour: "Does this mean parametrically?")
 
-# Extra cool facts
+# Extra cool facts (kilometersperhour: "This is here from the Engel's original repo")
 
 1) I came up with the original version of this when I was 16 and in high school and it was done in blender because thats all I knew how to use
 
