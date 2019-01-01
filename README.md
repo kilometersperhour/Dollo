@@ -13,11 +13,11 @@ A (almost) fully printed 3D printer, that scales.
 
 5) Make it as low cost as possible.
 
-6) use parts that are easy to find.
+6) Use parts that are easy to find.
 
-7) make it durable (since it can print its own parts this isn't super high priority)
+7) Make it durable (since it can print its own parts this isn't super high priority)
 
-8) hope people stop asking "what if you could 3D print a 3D printer" because of course you can and its not that unique of an idea
+8) Hope people stop asking "what if you could 3D print a 3D printer" because of course you can and it's not that unique of an idea
 
 # Part count and list for smallest viable Dollo, with around 21x21x12cm print volume. Smaller frame can be built, but the z-axis parts aren't tested in any way with that kind of setup
 
